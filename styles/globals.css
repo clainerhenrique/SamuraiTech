@@ -241,6 +241,16 @@ main{
     margin: 8px auto 0 auto;
 }
 
+
+/* Estilo para tornar o conteúdo dentro de .product clicável */
+.product a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: inherit; /* Herda a cor do texto do pai */
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    display: block; /* Transforma o link em um bloco para ocupar todo o espaço disponível */
+    width: 100%; /* Garante que o link ocupe toda a largura da .product */
+}
+
 .product{
     color: #2c2c2c;
     margin-bottom: 1rem;
@@ -454,4 +464,9 @@ main{
 
 
 
-/*Pe da pagina*/
+/*Estilizando pagina do produto*/
+
+
+
+
+
