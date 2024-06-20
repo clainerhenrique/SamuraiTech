@@ -1,29 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>Detalhes do Produto 1</title>
+    <title>Samurai Tech</title>
+    <link rel="stylesheet" href="../styles/globals.css">
+    <style>
+        /* Estilo para tornar o link discreto */
+        .navbar ul li a {
+            text-decoration: none; /* Remove o sublinhado padrão */
+            color: inherit; /* Herda a cor do texto do pai */
+            cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+        }
+
+        
+        
+    </style>
 </head>
 <body>
-    <header>
-        <h1>SamuraiTech</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <!-- Outros links de navegação -->
-        </nav>
-    </header>
-    <main>
-        <div class="product-details">
-            <img src="../images/produto1.jpg" alt="Produto 1">
-            <h2>Produto 1</h2>
-            <p>Preço: R$ 100,00</p>
-            <p>Em estoque: 50</p>
+    <div class="navbar">
+        <div class="header-inner-content">
+            <h1 class="logo">SAMURAI<span>TECH</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Conta</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="../images/cart.png" />
+                <img src="../images/menu.png" class="menu-button" />
+            </div>
         </div>
-    </main>
-    <footer>
-        <!-- Informações do rodapé -->
+    </div>
+        <div class="gray-background">
+        <div class="header-inner-content">
+            <div class="header-botton-side exclusive-container">
+                <div class="header-botton-side-left">
+                    <h2>Notebook Gamer Msi</h2>
+                   
+                    <ul>
+                        <li>Processador: Intel Core i7-12700H (12ª geração)</li>
+                        <li>Memória RAM: 16GB DDR5</li>
+                        <li>Armazenamento: SSD NVMe de 1TB</li>
+                        <li>Placa de Vídeo: NVIDIA GeForce RTX 3060 com 6GB GDDR6</li>
+                        <li>Tela: 15.6" Full HD (1920x1080) com 144Hz de taxa de atualização</li>
+                        <li>Teclado: RGB retroiluminado com teclas anti-ghosting</li>
+                        <li>Sistema Operacional: Windows 11 Home</li>
+                        <li>Conectividade: Wi-Fi 6, Bluetooth 5.2</li>
+                        <li>Portas: 3x USB 3.1, 1x USB-C, HDMI 2.1, RJ-45, Entrada para fone de ouvido</li>
+                        
+
+                    </ul>
+                    <button>Adicionar ao carrinho &#8594;</button>
+                    <h4>5 unidades</h4>
+                </div>
+                <div class="header-botton-side-right">
+                    <img src="../images/gaming-msi-header.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="navbar">
+        <div class="page-inner-content footer-content">
+            <div class="donwload-options">
+                <p>Aplicativos</p>
+                <p>Baixe nosso aplicativo para android e iOS</p>
+                <div>
+                    <img src="../images/app-store.png" alt="">
+                    <img src="../images/play-store.png" alt="">
+                </div>
+            </div>
+            <div class="logo-footer">
+                <h1 class = "logo">SAMURAI<span>TECH</span></h1>
+                <p>Nosso objetivo é conquistar nossos clientes!</p>
+            </div>
+            <div class="links-footer">
+                <h3>Links uteis</h3>
+                <ul>
+                    <li>Cupons</li>
+                    <li>Blog Post</li>
+                    <li>Politicas</li>
+                    <li>Torne-se afiliado</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="page-inner-content">
+        <div class="page-inner-content copyright">
+            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados </p>
+        </div>
     </footer>
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+
+        menuButton.addEventListener('click', () => { 
+            navbar.classList.toggle("show-menu");
+        });
+    </script>
 </body>
 </html>

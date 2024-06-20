@@ -97,6 +97,8 @@ header{
 .header-botton-side-left{
     height: 100%;
     flex-basis: 50%;
+    
+
 }
 
 .header-botton-side-left h2{
@@ -109,6 +111,16 @@ header{
     margin-bottom: 1.5rem;
 }
 
+.header-botton-side-left h4{
+            
+    text-align: justify;
+    padding: 1rem 7rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
 .header-botton-side-left button{
     background-color: #0084ff;
     border: none;
@@ -119,6 +131,8 @@ header{
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .header-botton-side-left button:hover{
@@ -134,6 +148,7 @@ header{
 
 .header-botton-side-right img {
     width: 115%;
+    border-radius: 22px;
 }
 
 /*Controle de responsividade*/
@@ -382,7 +397,7 @@ main{
     color: #8f8f8f;
     padding: 4rem 1rem;
     gap: 2rem;
-
+    
 }
 
 .donwload-options>*{
