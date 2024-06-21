@@ -484,6 +484,19 @@ main{
 
 /*Estilizando pagina do produto*/
 
+.header-botton-side-details {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos igualmente na horizontal */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 2rem; /* Espaçamento interno */
+}
+
+.header-botton-side-left-details {
+    flex: 0.8; /* Ocupa o espaço disponível */
+    margin-right: 1rem; /* Margem à direita para espaçamento entre os elementos */
+}
+
+
 /* Define a cor do texto para branco dentro do container esquerdo */
 .header-botton-side-left-details {
     color: white;
@@ -554,7 +567,7 @@ main{
 
 /* Estiliza a imagem dentro do container direito */
 .header-botton-side-right-details img {
-    width: 150%; /* Define a largura da imagem como 150% do seu container pai */
+    width: 90%; /* Define a largura da imagem como 150% do seu container pai */
     border-radius: 5px; /* Faz as bordas da imagem levemente arredondadas */
     display: block; /* Faz a imagem ser exibida como um bloco */
 }
