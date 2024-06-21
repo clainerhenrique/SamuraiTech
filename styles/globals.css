@@ -118,6 +118,9 @@ header{
     color: white;
     font-size: 1rem;
     font-weight: 500;
+    margin-left: 15rem;
+    margin-inline-start: auto;
+    
 }
 
 
@@ -481,7 +484,78 @@ main{
 
 /*Estilizando pagina do produto*/
 
+/* Define a cor do texto para branco dentro do container esquerdo */
+.header-botton-side-left-details {
+    color: white;
+}
 
+/* Remove os estilos de lista padrão e margens/padding para o ul dentro do container esquerdo */
+.header-botton-side-left-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+/* Define o tamanho da fonte e a margem inferior para o h2 dentro do container esquerdo */
+.header-botton-side-left-details h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
+/* Estiliza o container que envolve o botão e o h4 para alinhar centralizadamente e adicionar um gap entre eles */
+.button-h4-container-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Estiliza o botão dentro do container esquerdo */
+.header-botton-side-left-details button {
+    background-color: #0084ff; /* Cor de fundo azul */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar sobre o botão */
+    padding: 0.8rem 3.8rem; /* Define o espaçamento interno do botão */
+    margin-top: 1rem; /* Adiciona uma margem superior */
+    border-radius: 9999px; /* Faz as bordas do botão totalmente arredondadas */
+    color: white; /* Define a cor do texto para branco */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    font-weight: 500; /* Define o peso da fonte */
+    transition: all 0.3s; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+/* Estiliza o botão ao passar o mouse sobre ele */
+.header-botton-side-left-details button:hover {
+    background-color: #004c94; /* Muda a cor de fundo para um azul mais escuro */
+}
+
+/* Estiliza o h4 dentro do container esquerdo */
+.header-botton-side-left-details h4 {
+    font-size: 1rem; /* Define o tamanho da fonte */
+    font-weight: 500; /* Define o peso da fonte */
+    margin-top: 1rem; /* Adiciona uma margem superior */
+}
+
+/* Estiliza o container direito, centralizando o conteúdo e adicionando uma margem à esquerda */
+.header-botton-side-right-details {
+    flex: 1; /* Faz o container ocupar todo o espaço disponível */
+    display: flex; /* Utiliza flexbox para o layout */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo dentro do container */
+    align-items: center; /* Centraliza verticalmente o conteúdo dentro do container */
+    margin-left: 2rem; /* Adiciona espaço à esquerda da imagem */
+}
+
+/* Estiliza o container da imagem, adicionando fundo branco, padding, borda e bordas arredondadas */
+.image-container {
+    background-color: white; /* Define a cor de fundo para branco */
+    padding: 1rem; /* Adiciona espaçamento interno */
+    border: 2px solid #ddd; /* Define uma borda sólida de 2px com cor cinza claro */
+    border-radius: 22px; /* Faz as bordas arredondadas com raio de 22px */
+}
+
+/* Estiliza a imagem dentro do container direito */
+.header-botton-side-right-details img {
+    width: 150%; /* Define a largura da imagem como 150% do seu container pai */
+    border-radius: 5px; /* Faz as bordas da imagem levemente arredondadas */
+    display: block; /* Faz a imagem ser exibida como um bloco */
+}
 
