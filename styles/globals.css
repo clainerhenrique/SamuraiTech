@@ -515,21 +515,58 @@ main{
     margin-top: 1rem;
 }
 
-.header-botton-side-left-details button {
-    background-color: #0084ff;
+.button-h4-container-details button {
+    padding: 10px 15px; /* Adicione ou ajuste conforme necessário */
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    border-radius: 999px;
     cursor: pointer;
-    padding: 0.8rem 3rem;
-    border-radius: 9999px;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-.header-botton-side-left-details button:hover {
-    background-color: #004c94;
+.button-h4-container-details button:hover {
+    background-color: #0056b3;
 }
+
+/* Estilos do carrinho */
+#cart {
+    position: fixed;  /* Define que o elemento fica fixo na tela, independentemente de rolagem */
+    margin-top: 10px;  /* Margem superior de 10 pixels */
+    top: 50px;  /* Distância do topo da janela do navegador */
+    right: 20px;  /* Distância da direita da janela do navegador */
+    width: 300px;  /* Largura do elemento */
+    background-color: #de3163;  /* Cor de fundo */
+    padding: 10px;  /* Espaçamento interno */
+    display: none;  /* Inicialmente esconde o elemento */
+    color: #fff;  /* Cor do texto */
+    text-align: center;  /* Centraliza o conteúdo horizontalmente */
+}
+
+.cart-item {
+    display: flex;  /* Usa flexbox para layout dos itens */
+    justify-content: space-between;  /* Distribui os itens ao longo do contêiner com espaço entre eles */
+    align-items: center;  /* Centraliza verticalmente os itens */
+    margin-bottom: 10px;  /* Margem inferior de 10 pixels */
+    font-size: larger;  /* Tamanho da fonte maior que o padrão */
+    margin-right: 50px;  /* Margem direita de 50 pixels */
+}
+
+.cart-item button {
+    padding: 5px 15px;  /* Preenchimento interno do botão (5px acima e abaixo, 15px à esquerda e à direita) */
+    background-color: #007bff;  /* Cor de fundo do botão */
+    color: #fff;  /* Cor do texto do botão */
+    border: none;  /* Remove a borda do botão */
+    border-radius: 999px;  /* Borda do botão arredondada (valor alto para um círculo) */
+    cursor: pointer;  /* Mostra o cursor como um ponteiro ao passar sobre o botão */
+    font-size: 14px;  /* Tamanho da fonte do botão */
+    margin-top: 5px;  /* Margem superior de 5 pixels */
+}
+
+
+
+
 
 .header-botton-side-left-details h4 {
     font-size: 1.2rem;

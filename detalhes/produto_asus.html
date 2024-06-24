@@ -12,9 +12,6 @@
             color: inherit; /* Herda a cor do texto do pai */
             cursor: pointer; /* Mudar o cursor para indicar que é clicável */
         }
-
-        
-        
     </style>
 </head>
 <body>
@@ -51,10 +48,10 @@
                         <li>Sistema Operacional: Android 12</li>
                         <li>Conectividade: 5G, Wi-Fi 6E, Bluetooth 5.2</li>
                         <li>Portas: USB-C, Entrada para fone de ouvido</li>
-
                     </ul>
                     <div class="button-h4-container-details">
-                        <button>Adicionar ao carrinho</button>
+                        <button class="add-to-cart" data-name="Asus Rog Gamer" data-price="3499.00">Adicionar ao carrinho</button>
+                        <button class="checkout-btn" style="display: none;">Finalizar Compra</button>
                         <h4>12 unidades</h4>
                     </div>
                 </div>
@@ -66,10 +63,7 @@
             </div>
         </div>
     </div>
-    
-    
-    
-      
+
     <footer class="navbar">
         <div class="page-inner-content footer-content">
             <div class="donwload-options">
@@ -81,15 +75,15 @@
                 </div>
             </div>
             <div class="logo-footer">
-                <h1 class = "logo">SAMURAI<span>TECH</span></h1>
+                <h1 class="logo">SAMURAI<span>TECH</span></h1>
                 <p>Nosso objetivo é conquistar nossos clientes!</p>
             </div>
             <div class="links-footer">
-                <h3>Links uteis</h3>
+                <h3>Links úteis</h3>
                 <ul>
                     <li>Cupons</li>
                     <li>Blog Post</li>
-                    <li>Politicas</li>
+                    <li>Políticas</li>
                     <li>Torne-se afiliado</li>
                 </ul>
             </div>
@@ -97,15 +91,18 @@
 
         <hr class="page-inner-content">
         <div class="page-inner-content copyright">
-            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados </p>
+            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados</p>
         </div>
     </footer>
 
+    <div id="cart"></div>
+
+    <script src="../js/cart.js"></script>
     <script>
         const navbar = document.querySelector(".navbar");
         const menuButton = document.querySelector(".menu-button");
 
-        menuButton.addEventListener('click', () => { 
+        menuButton.addEventListener('click', () => {
             navbar.classList.toggle("show-menu");
         });
     </script>
