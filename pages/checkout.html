@@ -5,47 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samurai Tech</title>
     <link rel="stylesheet" href="../styles/checkout.css">
-    <style>
-        /* Estilo para tornar o link discreto */
-        .navbar ul li a {
-            text-decoration: none; /* Remove o sublinhado padrão */
-            color: inherit; /* Herda a cor do texto do pai */
-            cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-        }
-        .checkout-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-        font-size: 16px; /* Tamanho da fonte ajustado */
-        }
-
-        .checkout-item p {
-        margin: 0;
-        }
-
-        .checkout-total {
-        font-weight: bold;
-        margin-top: 20px;
-        font-size: 18px; /* Tamanho da fonte ajustado */
-        }
-
-        .checkout-container button {
-        padding: 10px 15px; /* Adicione ou ajuste conforme necessário */
-        background-color: #1b4b80;
-        color: #fff;
-        border: none;
-        border-radius: 999px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: background-color 0.3s ease;
-        margin-top: 20px; /* Espaçamento entre o total e o botão */
-        }
-
-        .checkout-container button:hover {
-        background-color: #0056b3;
-        }
-    </style>
+        
 </head>
 <body>
     <div class="navbar">
@@ -61,23 +21,24 @@
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <a href="pages/checkout.html"></a>
+                <a href="pages/checkout.html">
                     <img src="../images/cart.png" />
                 </a>
                 <img src="../images/menu.png" class="menu-button" />
             </div>
         </div>
     </div>
-<body>
+
     <div class="checkout-container">
-        <h1>Checkout</h1>
+        <h1>Adicionados ao carrinho</h1>
         <div id="checkout-items"></div>
         <div class="checkout-total" id="checkout-total"></div>
         <button onclick="finalizarCompra()">Finalizar Compra</button>
     </div>
+
     <footer class="navbar">
         <div class="page-inner-content footer-content">
-            <div class="donwload-options">
+            <div class="download-options">
                 <p>Aplicativos</p>
                 <p>Baixe nosso aplicativo para android e iOS</p>
                 <div>
@@ -122,9 +83,9 @@
                 const itemElement = document.createElement('div');
                 itemElement.classList.add('checkout-item');
                 itemElement.innerHTML = `
-                    <p>${item.name}</p>
-                    <p>${item.price.toFixed(2)} R$</p>
-                    <p>Quantidade: ${item.quantity}</p>
+                    <p class="item-info">${item.name}</p>
+                    <p class="item-info">${item.price.toFixed(2)} R$</p>
+                    <p class="item-info">Quantidade: ${item.quantity}</p>
                 `;
                 checkoutItemsContainer.appendChild(itemElement);
                 total += item.price * item.quantity;
