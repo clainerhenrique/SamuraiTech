@@ -511,24 +511,43 @@ main{
 .button-h4-container-details {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espaçamento entre os itens */
+    gap: 1rem; /* Espaçamento entre os botões */
     margin-top: 1rem;
 }
 
 .button-h4-container-details button {
-    padding: 10px 15px; /* Adicione ou ajuste conforme necessário */
-    background-color: #007bff;
-    color: #fff;
+    background-color: #0084ff;
     border: none;
-    border-radius: 999px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    padding: 0.2rem 3rem;
+    border-radius: 9999px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    flex: 1; /* Faz os botões crescerem igualmente */
+    height: 55px; /* Define uma altura fixa para ambos os botões */
+    
+    display: flex;
+    justify-content: center; /* Centraliza o texto no botão */
+    align-items: center; /* Centraliza o texto no botão */
 }
 
 .button-h4-container-details button:hover {
     background-color: #0056b3;
 }
+
+.button-h4-container-details h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+
+
+
 
 /* Estilos do carrinho */
 #cart {
@@ -563,9 +582,6 @@ main{
     font-size: 14px;  /* Tamanho da fonte do botão */
     margin-top: 5px;  /* Margem superior de 5 pixels */
 }
-
-
-
 
 
 .header-botton-side-left-details h4 {
