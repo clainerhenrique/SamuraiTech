@@ -42,16 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
             itemElement.classList.add("cart-item");
             itemElement.innerHTML = `
                 
-                <p>Produto: ${item.name}</p>
-                <p>Quantidade: ${item.quantity}</p>
-                <button class="increase" data-name="${item.name}">+</button>
-                <button class="decrease" data-name="${item.name}">-</button>
+                <p>Produto adicionado : ${item.name}</p>
+                <button class="remove" data-name="${item.name}">Limpar carinho</button>
             `;
+            //<p>Produto: ${item.name}</p>
+            //<p>Quantidade: ${item.quantity}</p>
+
             cartContainer.appendChild(itemElement);
         });
         const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
         const totalElement = document.createElement("p");
-        totalElement.textContent = `Total: ${total.toFixed(2)} R$`;
+        //totalElement.textContent = `Total: ${total.toFixed(2)} R$`;
         cartContainer.appendChild(totalElement);
         cartContainer.style.display = cart.length > 0 ? "block" : "none";
         
