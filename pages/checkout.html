@@ -85,13 +85,24 @@
                 itemElement.innerHTML = `
                     <p class="item-info">${item.name}</p>
                     <p class="item-info">${item.price.toFixed(2)} R$</p>
-                    <p class="item-info">Quantidade: ${item.quantity}</p>
+                    <label for="quantity-${item.name}">Quantidade:</label>
+                    <input type="number" id="quantity-${item.name}" class="item-quantity" value="${item.quantity}" min="1" onchange="updateQuantity('${item.name}', this.value)">
                 `;
                 checkoutItemsContainer.appendChild(itemElement);
                 total += item.price * item.quantity;
             });
 
             checkoutTotalContainer.textContent = `Total: ${total.toFixed(2)} R$`;
+        }
+
+        function updateQuantity(name, newQuantity) {
+            const cart = getCart();
+            const itemIndex = cart.findIndex(item => item.name === name);
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity = parseInt(newQuantity, 10) || 1; // Garante que a quantidade seja um número inteiro positivo
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCheckout(); // Atualiza a interface após a alteração
+            }
         }
 
         function finalizarCompra() {

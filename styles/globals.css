@@ -557,22 +557,23 @@ main{
     position: fixed;  /* Define que o elemento fica fixo na tela, independentemente de rolagem */
     margin-top: 20px;  /* Margem superior de 10 pixels */
     top: 50px;  /* Distância do topo da janela do navegador */
-    right: 20px;  /* Distância da direita da janela do navegador */
-    width: 430px;  /* Largura do elemento */
+    right: 10px;  /* Distância da direita da janela do navegador */
+    width: 420px;  /* Largura do elemento */
     background-color: #de3163;  /* Cor de fundo */
     padding: 7px;  /* Espaçamento interno */
     display: none;  /* Inicialmente esconde o elemento */
     color: #fff;  /* Cor do texto */
     text-align: center;  /* Centraliza o conteúdo horizontalmente */
+    
 }
 
 .cart-item {
-    display: flex;  /* Usa flexbox para layout dos itens */
+    display: block;  /* Usa flexbox para layout dos itens */
     justify-content: space-between;  /* Distribui os itens ao longo do contêiner com espaço entre eles */
     align-items: baseline;  /* Centraliza verticalmente os itens */
     margin-bottom: 20px;  /* Margem inferior de 10 pixels */
     font-size: 14px;  /* Tamanho da fonte maior que o padrão */
-    margin-right: 20px;  /* Margem direita de 50 pixels */
+    margin-right: 100px;  /* Margem direita de 50 pixels */
 }
 
 .cart-item button {
