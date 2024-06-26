@@ -12,9 +12,6 @@
             color: inherit; /* Herda a cor do texto do pai */
             cursor: pointer; /* Mudar o cursor para indicar que é clicável */
         }
-
-        
-        
     </style>
 </head>
 <body>
@@ -31,7 +28,9 @@
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <img src="../images/cart.png" />
+                <a href="../pages/checkout.html">
+                    <img src="../images/cart.png" alt="Carrinho de Compras" />
+                </a>
                 <img src="../images/menu.png" class="menu-button" />
             </div>
         </div>
@@ -39,8 +38,8 @@
     <div class="gray-background">
         <div class="header-inner-content">
             <div class="header-botton-side exclusive-container">
-                <div class="header-botton-side-left-details">
-                    <h2>Cadeira Gamer Samura</h2>
+                <div class="header-botton-side-left">
+                    <h2>Cadeira Gamer</h2>
                     <ul>
                         <li>Material: Couro PU de alta qualidade</li>
                         <li>Estrutura: Base reforçada em metal resistente</li>
@@ -51,26 +50,20 @@
                         <li>Design: Estilo racing com bordas elevadas para suporte lateral</li>
                         <li>Cor: Disponível em diversas cores e acabamentos</li>
                         <li>Dimensões: Aproximadamente 70 cm x 70 cm x 120 cm (L x P x A)</li>
-
-
                     </ul>
                     <div class="button-h4-container-details">
-                        <button>Adicionar ao carrinho</button>
-                        <h4>22 unidades</h4>
+                        <button class="add-to-cart" data-name="Cadeira Gamer" data-price="799.00">Adicionar Carrinho</button>
+                        <button class="checkout-btn" style="display: none;">Finalizar Compra</button>
+                        <h4>12 unidades</h4>
                     </div>
                 </div>
-                <div class="header-botton-side-right-details">
-                    <div class="image-container">
-                        <img src="../images/products/product-7.png" alt="Notebook Gamer MSI">
-                    </div>
+                <div class="header-botton-side-right">
+                    <img src="../images/products/product-7.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-      
+
     <footer class="navbar">
         <div class="page-inner-content footer-content">
             <div class="donwload-options">
@@ -82,15 +75,15 @@
                 </div>
             </div>
             <div class="logo-footer">
-                <h1 class = "logo">SAMURAI<span>TECH</span></h1>
+                <h1 class="logo">SAMURAI<span>TECH</span></h1>
                 <p>Nosso objetivo é conquistar nossos clientes!</p>
             </div>
             <div class="links-footer">
-                <h3>Links uteis</h3>
+                <h3>Links úteis</h3>
                 <ul>
                     <li>Cupons</li>
                     <li>Blog Post</li>
-                    <li>Politicas</li>
+                    <li>Políticas</li>
                     <li>Torne-se afiliado</li>
                 </ul>
             </div>
@@ -98,15 +91,18 @@
 
         <hr class="page-inner-content">
         <div class="page-inner-content copyright">
-            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados </p>
+            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados</p>
         </div>
     </footer>
 
+    <div id="cart"></div>
+
+    <script src="../js/cart.js"></script>
     <script>
         const navbar = document.querySelector(".navbar");
         const menuButton = document.querySelector(".menu-button");
 
-        menuButton.addEventListener('click', () => { 
+        menuButton.addEventListener('click', () => {
             navbar.classList.toggle("show-menu");
         });
     </script>

@@ -39,12 +39,13 @@
 
 /* Container do checkout */
 .checkout-container {
-    width: 1821px; /* Limita a largura máxima do container */
-    height: 555px;
+    max-width: none; /* Limita a largura máxima do container */
+    max-height: min-content;
     margin: 0 auto; /* Centraliza o container na página */
     padding: 20px;
     background-color: #de3163; /* Cor de fundo rosa */
     text-align: center; /* Centraliza o conteúdo */
+    
 }
 
 /* Estilo do botão de finalizar compra */

@@ -12,9 +12,6 @@
             color: inherit; /* Herda a cor do texto do pai */
             cursor: pointer; /* Mudar o cursor para indicar que é clicável */
         }
-
-        
-        
     </style>
 </head>
 <body>
@@ -31,7 +28,9 @@
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <img src="../images/cart.png" />
+                <a href="../pages/checkout.html">
+                    <img src="../images/cart.png" alt="Carrinho de Compras" />
+                </a>
                 <img src="../images/menu.png" class="menu-button" />
             </div>
         </div>
@@ -39,36 +38,34 @@
     <div class="gray-background">
         <div class="header-inner-content">
             <div class="header-botton-side exclusive-container">
-                <div class="header-botton-side-left-details">
-                    <h2>Xiaomi 13 Ultra </h2>
+                <div class="header-botton-side-left">
+                    <h2>Xiaomi 13 Ultra</h2>
                     <ul>
-                        <li>Modelo: Xiaomi 13 Ultra</li>
-                        <li>Processador: Intel Core i7 de 11ª geração</li>
-                        <li>Memória RAM: 16GB LPDDR4X</li>
-                        <li>Armazenamento: SSD NVMe de 1TB</li>
-                        <li>Tela: 13.3" OLED, resolução 2560 x 1600 pixels</li>
-                        <li>Placa Gráfica: Integrada Intel Iris Xe Graphics</li>
-                        <li>Sistema Operacional: Windows 10 ou Windows 11 (dependendo da versão)</li>
-                        <li>Conectividade: Wi-Fi 6, Bluetooth 5.1</li>
-                        <li>Portas: USB-C, Thunderbolt 4, USB-A, HDMI (possíveis variações)</li>
+                        <li>Processador: Qualcomm Snapdragon 8 Gen 2 octa-core</li>
+                        <li>Memória RAM: 12GB LPDDR5</li>
+                        <li>Armazenamento: 1TB UFS 4.1</li>
+                        <li>Tela: 6.8" AMOLED Quad HD+ com taxa de atualização de 120Hz e HDR10+</li>
+                        <li>Câmera Traseira: Sistema de câmera quádrupla de 108MP (principal) + 16MP (ultra-wide) + 12MP (telefoto) + 5MP (sensor de profundidade)</li>
+                        <li>Câmera Frontal: 32MP</li>
+                        <li>Sistema Operacional: MIUI 14 baseado no Android 13</li>
+                        <li>Bateria: 5000mAh com suporte a carregamento rápido de 100W, carregamento sem fio de 50W e reverso de 10W</li>
+                        <li>Conectividade: 5G, Wi-Fi 6E, Bluetooth 5.2</li>
+                        <li>Outros Recursos: Leitor de impressão digital sob a tela, alto-falantes estéreo, NFC, resistência à água e poeira IP68</li>
+
                     </ul>
                     <div class="button-h4-container-details">
-                        <button>Adicionar ao carrinho</button>
-                        <h4>32 unidades</h4>
+                        <button class="add-to-cart" data-name="Xiaomi 13 Ultra" data-price="2599.00">Adicionar Carrinho</button>
+                        <button class="checkout-btn" style="display: none;">Finalizar Compra</button>
+                        <h4>12 unidades</h4>
                     </div>
                 </div>
-                <div class="header-botton-side-right-details">
-                    <div class="image-container">
-                        <img src="../images/products/product-11.png" alt="Notebook Gamer MSI">
-                    </div>
+                <div class="header-botton-side-right">
+                    <img src="../images/products/product-11.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-      
+
     <footer class="navbar">
         <div class="page-inner-content footer-content">
             <div class="donwload-options">
@@ -80,15 +77,15 @@
                 </div>
             </div>
             <div class="logo-footer">
-                <h1 class = "logo">SAMURAI<span>TECH</span></h1>
+                <h1 class="logo">SAMURAI<span>TECH</span></h1>
                 <p>Nosso objetivo é conquistar nossos clientes!</p>
             </div>
             <div class="links-footer">
-                <h3>Links uteis</h3>
+                <h3>Links úteis</h3>
                 <ul>
                     <li>Cupons</li>
                     <li>Blog Post</li>
-                    <li>Politicas</li>
+                    <li>Políticas</li>
                     <li>Torne-se afiliado</li>
                 </ul>
             </div>
@@ -96,15 +93,18 @@
 
         <hr class="page-inner-content">
         <div class="page-inner-content copyright">
-            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados </p>
+            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados</p>
         </div>
     </footer>
 
+    <div id="cart"></div>
+
+    <script src="../js/cart.js"></script>
     <script>
         const navbar = document.querySelector(".navbar");
         const menuButton = document.querySelector(".menu-button");
 
-        menuButton.addEventListener('click', () => { 
+        menuButton.addEventListener('click', () => {
             navbar.classList.toggle("show-menu");
         });
     </script>

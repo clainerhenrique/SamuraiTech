@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             itemElement.classList.add("cart-item");
             itemElement.innerHTML = `
                 
+                <p>Produto: ${item.name}</p>
                 <p>Quantidade: ${item.quantity}</p>
                 <button class="increase" data-name="${item.name}">+</button>
                 <button class="decrease" data-name="${item.name}">-</button>

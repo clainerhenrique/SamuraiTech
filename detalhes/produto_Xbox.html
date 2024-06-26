@@ -1,29 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>Detalhes do Produto 1</title>
+    <title>Samurai Tech</title>
+    <link rel="stylesheet" href="../styles/globals.css">
+    <style>
+        /* Estilo para tornar o link discreto */
+        .navbar ul li a {
+            text-decoration: none; /* Remove o sublinhado padrão */
+            color: inherit; /* Herda a cor do texto do pai */
+            cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>SamuraiTech</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <!-- Outros links de navegação -->
-        </nav>
-    </header>
-    <main>
-        <div class="product-details">
-            <img src="/images/products/product-11.png" alt="Produto 1">
-            <h2>Produto 1</h2>
-            <p>Preço: R$ 100,00</p>
-            <p>Em estoque: 50</p>
+    <div class="navbar">
+        <div class="header-inner-content">
+            <h1 class="logo">SAMURAI<span>TECH</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Conta</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <a href="../pages/checkout.html">
+                    <img src="../images/cart.png" alt="Carrinho de Compras" />
+                </a>
+                <img src="../images/menu.png" class="menu-button" />
+            </div>
         </div>
-    </main>
-    <footer>
-        <!-- Informações do rodapé -->
+    </div>
+    <div class="gray-background">
+        <div class="header-inner-content">
+            <div class="header-botton-side exclusive-container">
+                <div class="header-botton-side-left">
+                    <h2>Xbox Series X</h2>
+                    <ul>
+                        <li>Processador: CPU AMD Zen 2 octa-core com clock variável até 3.8 GHz</li>
+                        <li>GPU: GPU AMD RDNA 2 com 52 unidades de computação e clock de 1.825 GHz</li>
+                        <li>Memória RAM: 16GB GDDR6</li>
+                        <li>Armazenamento: SSD NVMe customizado de 1TB</li>
+                        <li>Unidade Óptica: Unidade de disco Blu-ray 4K Ultra HD</li>
+                        <li>Resolução Máxima: Suporte a jogos em até 4K nativo a 60fps, até 120fps</li>
+                        <li>Áudio: Dolby Digital 5.1, Dolby TrueHD com Atmos, DTS 5.1, AAC, PCM 5.1, PCM 7.1</li>
+                        <li>Conectividade: Wi-Fi 5 (802.11ac), Ethernet 802.3 10/100/1000, Bluetooth 5.0</li>
+                        <li>Portas: 1x HDMI 2.1, 3x USB 3.1 Gen 1, 1x Porta de armazenamento expansível</li>
+                        <li>Dimensões: Aproximadamente 301mm x 151mm x 151mm (largura x altura x profundidade)</li>
+                        <li>Peso: Aproximadamente 4.45kg</li>
+                    </ul>
+                    <div class="button-h4-container-details">
+                        <button class="add-to-cart" data-name="Xbox Series X" data-price="3799.00">Adicionar Carrinho</button>
+                        <button class="checkout-btn" style="display: none;">Finalizar Compra</button>
+                        <h4>12 unidades</h4>
+                    </div>
+                </div>
+                <div class="header-botton-side-right">
+                    <img src="../images/products/product-12.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="navbar">
+        <div class="page-inner-content footer-content">
+            <div class="donwload-options">
+                <p>Aplicativos</p>
+                <p>Baixe nosso aplicativo para android e iOS</p>
+                <div>
+                    <img src="../images/app-store.png" alt="">
+                    <img src="../images/play-store.png" alt="">
+                </div>
+            </div>
+            <div class="logo-footer">
+                <h1 class="logo">SAMURAI<span>TECH</span></h1>
+                <p>Nosso objetivo é conquistar nossos clientes!</p>
+            </div>
+            <div class="links-footer">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li>Cupons</li>
+                    <li>Blog Post</li>
+                    <li>Políticas</li>
+                    <li>Torne-se afiliado</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="page-inner-content">
+        <div class="page-inner-content copyright">
+            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados</p>
+        </div>
     </footer>
+
+    <div id="cart"></div>
+
+    <script src="../js/cart.js"></script>
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle("show-menu");
+        });
+    </script>
 </body>
 </html>

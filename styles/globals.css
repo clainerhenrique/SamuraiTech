@@ -552,12 +552,12 @@ main{
 /* Estilos do carrinho */
 #cart {
     position: fixed;  /* Define que o elemento fica fixo na tela, independentemente de rolagem */
-    margin-top: 10px;  /* Margem superior de 10 pixels */
+    margin-top: 20px;  /* Margem superior de 10 pixels */
     top: 50px;  /* Distância do topo da janela do navegador */
     right: 20px;  /* Distância da direita da janela do navegador */
-    width: 300px;  /* Largura do elemento */
+    width: 430px;  /* Largura do elemento */
     background-color: #de3163;  /* Cor de fundo */
-    padding: 10px;  /* Espaçamento interno */
+    padding: 7px;  /* Espaçamento interno */
     display: none;  /* Inicialmente esconde o elemento */
     color: #fff;  /* Cor do texto */
     text-align: center;  /* Centraliza o conteúdo horizontalmente */
@@ -566,10 +566,10 @@ main{
 .cart-item {
     display: flex;  /* Usa flexbox para layout dos itens */
     justify-content: space-between;  /* Distribui os itens ao longo do contêiner com espaço entre eles */
-    align-items: center;  /* Centraliza verticalmente os itens */
-    margin-bottom: 10px;  /* Margem inferior de 10 pixels */
-    font-size: larger;  /* Tamanho da fonte maior que o padrão */
-    margin-right: 50px;  /* Margem direita de 50 pixels */
+    align-items: baseline;  /* Centraliza verticalmente os itens */
+    margin-bottom: 20px;  /* Margem inferior de 10 pixels */
+    font-size: 14px;  /* Tamanho da fonte maior que o padrão */
+    margin-right: 20px;  /* Margem direita de 50 pixels */
 }
 
 .cart-item button {

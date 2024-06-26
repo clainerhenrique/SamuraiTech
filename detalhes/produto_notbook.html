@@ -12,9 +12,6 @@
             color: inherit; /* Herda a cor do texto do pai */
             cursor: pointer; /* Mudar o cursor para indicar que é clicável */
         }
-
-        
-        
     </style>
 </head>
 <body>
@@ -31,7 +28,9 @@
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <img src="../images/cart.png" />
+                <a href="../pages/checkout.html">
+                    <img src="../images/cart.png" alt="Carrinho de Compras" />
+                </a>
                 <img src="../images/menu.png" class="menu-button" />
             </div>
         </div>
@@ -39,36 +38,35 @@
     <div class="gray-background">
         <div class="header-inner-content">
             <div class="header-botton-side exclusive-container">
-                <div class="header-botton-side-left-details">
-                    <h2>Notebook Gamer Msi</h2>
+                <div class="header-botton-side-left">
+                    <h2>Notebook Gamer MSI</h2>
                     <ul>
-                        <li>Processador: Intel Core i7-12700H (12ª geração)</li>
-                        <li>Memória RAM: 16GB DDR5</li>
-                        <li>Armazenamento: SSD NVMe de 1TB</li>
-                        <li>Placa de Vídeo: NVIDIA GeForce RTX 3060 com 6GB GDDR6</li>
-                        <li>Tela: 15.6" Full HD (1920x1080) com 144Hz de taxa de atualização</li>
-                        <li>Teclado: RGB retroiluminado com teclas anti-ghosting</li>
-                        <li>Sistema Operacional: Windows 11 Home</li>
-                        <li>Conectividade: Wi-Fi 6, Bluetooth 5.2</li>
-                        <li>Portas: 3x USB 3.1, 1x USB-C, HDMI 2.1, RJ-45, Entrada para fone de ouvido</li>
+                        <li>Processador: Intel Core i7-11800H (8 núcleos, até 4.6 GHz)</li>
+                        <li>Memória RAM: 16GB DDR4 3200MHz (expansível até 64GB)</li>
+                        <li>Armazenamento: 1TB NVMe SSD</li>
+                        <li>Placa de Vídeo: NVIDIA GeForce RTX 3070 com 8GB GDDR6</li>
+                        <li>Tela: 15.6" Full HD (1920x1080) IPS, 240Hz de taxa de atualização</li>
+                        <li>Teclado: Teclado RGB por tecla SteelSeries</li>
+                        <li>Sistema Operacional: Windows 10 Home (atualizável para Windows 11)</li>
+                        <li>Conectividade: Wi-Fi 6E, Bluetooth 5.2</li>
+                        <li>Portas: 1x USB 3.2 Gen 2 Type-C, 1x USB 3.2 Gen 2 Type-C com DisplayPort, 3x USB 3.2 Gen 1 Type-A, 1x HDMI 2.1, 1x Mini DisplayPort, 1x RJ-45, 1x entrada para microfone, 1x saída para fone de ouvido</li>
+                        <li>Bateria: 99.9Whr</li>
+                        <li>Áudio: Dynaudio Sound System, alto-falantes Duo Wave</li>
+                        <li>Outras características: Cooler Boost 5, suporte para VR, RGB Mystic Light, MSI Dragon Center</li>
                     </ul>
                     <div class="button-h4-container-details">
-                        <button>Adicionar ao carrinho</button>
-                        <h4>5 unidades</h4>
+                        <button class="add-to-cart" data-name="Notebook Gamer MSI" data-price="9499.00">Adicionar Carrinho</button>
+                        <button class="checkout-btn" style="display: none;">Finalizar Compra</button>
+                        <h4>12 unidades</h4>
                     </div>
                 </div>
-                <div class="header-botton-side-right-details">
-                    <div class="image-container">
-                        <img src="../images/gaming-msi-header.png" alt="Notebook Gamer MSI">
-                    </div>
+                <div class="header-botton-side-right">
+                    <img src="../images/gaming-msi-header.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-      
+
     <footer class="navbar">
         <div class="page-inner-content footer-content">
             <div class="donwload-options">
@@ -80,15 +78,15 @@
                 </div>
             </div>
             <div class="logo-footer">
-                <h1 class = "logo">SAMURAI<span>TECH</span></h1>
+                <h1 class="logo">SAMURAI<span>TECH</span></h1>
                 <p>Nosso objetivo é conquistar nossos clientes!</p>
             </div>
             <div class="links-footer">
-                <h3>Links uteis</h3>
+                <h3>Links úteis</h3>
                 <ul>
                     <li>Cupons</li>
                     <li>Blog Post</li>
-                    <li>Politicas</li>
+                    <li>Políticas</li>
                     <li>Torne-se afiliado</li>
                 </ul>
             </div>
@@ -96,15 +94,18 @@
 
         <hr class="page-inner-content">
         <div class="page-inner-content copyright">
-            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados </p>
+            <p>Copyright 2024 - NagasakiWeb - Todos os Direitos Reservados</p>
         </div>
     </footer>
 
+    <div id="cart"></div>
+
+    <script src="../js/cart.js"></script>
     <script>
         const navbar = document.querySelector(".navbar");
         const menuButton = document.querySelector(".menu-button");
 
-        menuButton.addEventListener('click', () => { 
+        menuButton.addEventListener('click', () => {
             navbar.classList.toggle("show-menu");
         });
     </script>
