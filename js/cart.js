@@ -42,9 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
             itemElement.classList.add("cart-item");
             itemElement.innerHTML = `
                 
-                <p>Produto adicionado : ${item.name}</p>
+                <p>Produto adicionado: ${item.name}</p>
                 <button class="remove" data-name="${item.name}">Limpar carinho</button>
             `;
+            //tentando
             //<p>Produto: ${item.name}</p>
             //<p>Quantidade: ${item.quantity}</p>
 
