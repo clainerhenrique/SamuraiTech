@@ -38,15 +38,17 @@
 }
 
 /* Container do checkout */
+
 .checkout-container {
-    max-width: none; /* Limita a largura máxima do container */
-    max-height: min-content;
-    margin: 0 auto; /* Centraliza o container na página */
+    max-width: 1350px; /* Exemplo: define uma largura máxima para o container */
+    min-height: 720px; /* Define a altura mínima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
     padding: 20px;
     background-color: #de3163; /* Cor de fundo rosa */
     text-align: center; /* Centraliza o conteúdo */
-    
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
+
 
 /* Estilo do botão de finalizar compra */
 .checkout-container button {
