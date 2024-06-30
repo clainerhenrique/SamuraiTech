@@ -40,7 +40,7 @@
 /* Container do checkout */
 
 .checkout-container {
-    max-width: 1350px; /* Exemplo: define uma largura máxima para o container */
+    max-width: none; /* Exemplo: define uma largura máxima para o container */
     min-height: 720px; /* Define a altura mínima do container */
     margin: 0 auto; /* Centraliza o container horizontalmente */
     padding: 20px;
