@@ -19,16 +19,16 @@
         <div class = "header-inner-content">
             <h1 class = "logo">SAMURAI<span>TECH</span></h1>
             <nav>
-                <ul>
+                <ul id="menu">
                     <li>Home</li>
-                    <li>Produtos</li>
-                    <li>Sobre</li>
-                    <li>Contato</li>
+                    <li class="scroll-to-products">Produtos</li>
+                    <li class="scroll-to-footer">Sobre</li>
+                    <li class="scroll-to-footer">Contato</li>
                     <li>Conta</li>
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <a href="../pages/checkout.html">
+                <a href="pages/checkout.html">
                     <img src="images/cart.png" alt="Carrinho de Compras" />
                 </a>
                 <img src="images/menu.png" class="menu-button" />
@@ -75,7 +75,7 @@
         </div>
 
         <div>
-            <div class="page-inner-content">
+            <div class="page-inner-content" class="section" id="products-section">
                 <h3 class="section-title">Produtos Selecionados</h3>
                 <div class="subtitle-inderline"></div>
                 <div class="cols cols-4">
@@ -192,10 +192,10 @@
                         <p>A Mi Band 4 é uma pulseira inteligente da Xiaomi que oferece uma variedade de 
                             recursos para ajudar a monitorar sua saúde e atividades diárias. Com um display colorido 
                             AMOLED de alta resolução, você pode visualizar facilmente suas estatísticas de fitness,
-                             receber notificações de chamadas, mensagens e aplicativos diretamente no seu pulso. 
-                             Além disso, a Mi Band 4 possui monitoramento contínuo de frequência cardíaca, 
-                             rastreamento de sono avançado e é resistente à água até 50 metros,
-                             tornando-a uma companheira ideal para suas atividades esportivas e estilo de vida ativo!
+                            receber notificações de chamadas, mensagens e aplicativos diretamente no seu pulso. 
+                            Além disso, a Mi Band 4 possui monitoramento contínuo de frequência cardíaca, 
+                            rastreamento de sono avançado e é resistente à água até 50 metros,
+                            tornando-a uma companheira ideal para suas atividades esportivas e estilo de vida ativo!
                         </p>
                         <a href="detalhes/produto_miBand.html">
                             <button>Ver Agora &#8594;</button>
@@ -212,29 +212,29 @@
             <div class="page-inner-content">
                 <div class="testimonials">
                     <div class="testimonial">
-                       <p>"</p> 
-                       <p>O melhor site do mundo gamer, envio super rapido e pessoal atencioso!</p>
-                       <p class="rate">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                       <p>Jobson Hirochima</p>
+                        <p>"</p> 
+                        <p>O melhor site do mundo gamer, envio super rapido e pessoal atencioso!</p>
+                        <p class="rate">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                        <p>Jobson Hirochima</p>
                     </div>
                     <div class="testimonial">
                         <p>"</p> 
                         <p>Qualidade dos produtos muito boa, super recomendo a loja!</p>
                         <p class="rate">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                         <p>Nakiata Nagasaki</p>
-                     </div>
-                     <div class="testimonial">
+                    </div>
+                    <div class="testimonial">
                         <p>"</p> 
                         <p>Valores atrativos, qualidade excelente e envio rapidos!</p>
                         <p class="rate">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                         <p>Wendiel tarkov</p>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="navbar">
+    <footer class="navbar" id="footer">
         <div class="page-inner-content footer-content">
             <div class="donwload-options">
                 <p>Aplicativos</p>
@@ -266,12 +266,55 @@
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
         const navbar = document.querySelector(".navbar");
         const menuButton = document.querySelector(".menu-button");
 
-        menuButton.addEventListener('click', () => { 
-            navbar.classList.toggle("show-menu");
+        if (menuButton) {
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+        }
+
+        // Função para rolar até o rodapé
+        function rolarParaRodape() {
+            var footer = document.getElementById("footer");
+            if (footer) {
+                footer.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        // Função para rolar até a seção de produtos
+        function rolarParaProdutos() {
+            var productsSection = document.getElementById("products-section");
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        // Seleciona todos os elementos com a classe 'scroll-to-footer'
+        var scrollElements = document.querySelectorAll(".scroll-to-footer");
+        scrollElements.forEach(function(element) {
+            element.addEventListener("click", function() {
+                console.log("Clique detectado em: " + element.textContent); // Log para verificar
+                rolarParaRodape();
+            });
         });
+
+        // Adiciona evento de clique para o item "Produtos" para rolar até a seção de produtos
+        var produtos = document.querySelector(".scroll-to-products");
+        if (produtos) {
+            console.log("Elemento 'produtos' encontrado.");
+            produtos.addEventListener("click", function() {
+                console.log("Clique em 'Produtos' detectado.");
+                rolarParaProdutos();
+            });
+        } else {
+            console.log("Elemento 'produtos' não encontrado.");
+        }
+    });
+
+
     </script>
 </body>
 </html>

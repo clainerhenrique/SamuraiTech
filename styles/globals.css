@@ -12,12 +12,10 @@ body{
 
 /* HEADER */
 .header-inner-content{
-    max-width: 1300px;
+    max-width: auto;
     margin-left: auto;
     margin-right: auto;
     
-
-
 }
 
 .navbar{
@@ -487,6 +485,8 @@ main{
 
 /*Estilizando pagina do produto*/
 
+
+
 .header-botton-side-details {
     display: flex;
     justify-content: space-between;
@@ -501,6 +501,7 @@ main{
 }
 
 .header-botton-side-left-details ul {
+    
     list-style: none;
     padding: 0;
     margin: 0;
