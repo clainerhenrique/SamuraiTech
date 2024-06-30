@@ -110,6 +110,8 @@ header{
 .header-botton-side-left p{
     line-height: 1.5rem;
     margin-bottom: 1.5rem;
+    margin-right: 4rem;
+    
 }
 
 .header-botton-side-left h4{
@@ -153,6 +155,7 @@ header{
 .header-botton-side-right img {
     width: 115%;
     border-radius: 22px;
+
 }
 
 /*Controle de responsividade*/
@@ -162,7 +165,7 @@ header{
     }
 
     .menu-button{
-       display: block; 
+    display: block; 
     }
 
     .header-botton-side{
